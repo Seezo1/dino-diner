@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     {
         public double Price { get; set; }
 
-        public int Calories { get; set; }
+        public uint Calories { get; set; }
 
         public List<string> Ingredients
         {

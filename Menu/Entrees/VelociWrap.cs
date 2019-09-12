@@ -14,14 +14,16 @@ namespace DinoDiner.Menu.Entrees
 
         public double Price { get; set; }
 
-        public int Calories { get; set; }
+        public uint Calories { get; set; }
 
         public List<string> Ingredients
         {
             get
             {
-                List<string> ingredients = new List<string>() {"Flour Tortilla", "Chicken Breast", "Romaine Lettuce",
-                    "Ceasar Dressing", "Parmesan Cheese"};
+                List<string> ingredients = new List<string>() { "Flour Tortilla", "Chicken Breast" };
+                if (dressing) ingredients.Add("Ceasar Dressing");
+                if (lettuce) ingredients.Add("Romaine Lettuce");
+                if (cheese) ingredients.Add("Parmesan Cheese");
                 return ingredients;
             }
         }
